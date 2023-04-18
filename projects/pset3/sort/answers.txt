@@ -1,0 +1,10 @@
+sort1 uses: bubble sort
+How do you know?: faster than sort3 on sorted list
+
+sort2 uses: merge sort
+
+How do you know?: the fastest on all surfaces
+
+sort3 uses: selection sort
+
+How do you know?: slower than sort1 on sorted list

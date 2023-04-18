@@ -1,0 +1,7 @@
+time ./sort1 - 8S
+time ./sort2 - 0.6s(merge)
+time ./sort3 - 3s
+
+
+time ./sort1 <sorted 50k> - 0.4s(bubble)
+time ./sort3 <sorted 50k> - 3s(selection)
