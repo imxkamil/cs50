@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <h3>Account balance: {{ cash }}</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price per share</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in portfolio %}
+            <tr>
+                <td>{{ row["symbol"] }}</td>
+                <td>{{ row["shares"] }}</td>
+                <td>${{ row["price"]|round(2) }}</td>
+                <td>${{ (row["price"]*row["shares"])|round(2) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td><b>Total:</b></td>
+            <td><b>XD</b></td>
+        </tfoot>
+    </table>
+
+{% endblock %}
